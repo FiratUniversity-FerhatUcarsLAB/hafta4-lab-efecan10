@@ -1,60 +1,41 @@
 /*
- * Ad Soyad: [ADINIZI BURAYA YAZIN]
- * Ogrenci No: [OGRENCI NUMARANIZI BURAYA YAZIN]
- * Tarih: [TARIHI BURAYA YAZIN]
+ * Ad Soyad: EFECAN ÖNAL
+ * Ogrenci No: 250541093
+ * Tarih: 6.11.2025
  * Aciklama: Gorev 1 - Ogrenci Bilgi Sistemi
- * 
- * Bu program kullanicidan ogrenci bilgilerini alir ve
- * duzenli bir formatta ekrana yazdirir.
- * Diğer java dosyalarının başında da bu örnek formattaki gibi kısa bilgi giriniz
- */
 
-import java.util.Scanner;
+     import java.util.Scanner;
 
-public class OgrenciBilgi {
+// Dosya adıyla aynı olmalı: OgrenciBilgi.java
+public class OgrenciBilgi { 
+
     public static void main(String[] args) {
-        // Scanner objesi olusturun
-        
-        
-        // Degisken tanimlamalari
-        // String ad, soyad;
-        // int ogrenciNo, yas;
-        // double gpa;
-        
-        
-        // Kullanicidan bilgileri alin
-        System.out.println("=== OGRENCI BILGI SISTEMI ===");
-        System.out.println();
-        
-        // Ad
-        
-        
-        // Soyad
-        
-        
-        // Ogrenci No
-        
-        
-        // Yas
-        
-        
-        // GPA
-        
-        
-        // Bilgileri ekrana yazdirin
-        System.out.println("\n=== OGRENCI BILGI SISTEMI ===");
-        
-        // COZUMUNUZU BURAYA YAZIN
-        
-        
-        
-        
-        
-        
+        Scanner girdi = new Scanner(System.in);
 
-        
-        
-        // Scanner'i kapatin (önemli pratik)
-        
+        // Kullanıcıdan Girdileri Alma
+        System.out.println("=== ÖĞRENCİ BİLGİ SİSTEMİ GİRİŞ ===");
+        System.out.print("Ad: ");
+        String ad = girdi.nextLine();
+        System.out.print("Soyad: ");
+        String soyad = girdi.nextLine();
+        System.out.print("Öğrenci No (int): ");
+        int ogrenciNo = girdi.nextInt();
+        System.out.print("Yaş (int): ");
+        int yas = girdi.nextInt();
+        System.out.print("GPA (çift): ");
+        double gpa = girdi.nextDouble();
+
+        girdi.close();
+
+        // Durum Tespiti
+        String durum = (gpa >= 2.00) ? "Basarili Ogrenci" : "Kosullu Ogrenci";
+
+        // Çıktı Formatı: printf() kullanarak düzenli çıktı
+        System.out.println("\n=== OGRENCI BILGI SISTEMI ===");
+        System.out.printf("Ad Soyad: %s %s\n", ad, soyad);
+        System.out.printf("Ogrenci No: %d\n", ogrenciNo);
+        System.out.printf("Yas: %d\n", yas);
+        System.out.printf("GPA: %.2f\n", gpa);
+        System.out.printf("Durum: %s\n", durum);
     }
 }
